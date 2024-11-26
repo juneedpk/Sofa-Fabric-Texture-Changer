@@ -17,16 +17,22 @@ with col1:
     st.subheader("Upload Sofa Image")
     sofa_file = st.file_uploader("Choose a sofa image...", type=['png', 'jpg', 'jpeg'])
     if sofa_file is not None:
-        sofa_image = Image.open(sofa_file).convert('RGB')
-        st.image(sofa_image, caption='Original Sofa', use_column_width=True)
+        sofa_image = Image.open(sofa_file)
+        # Convert palette images with transparency to RGBA
+        if sofa_image.mode == 'P' and 'transparency' in sofa_image.info:
+            sofa_image = sofa_image.convert('RGBA')
+        st.image(sofa_image, caption='Original Sofa', use_container_width=True)
 
 # Fabric image upload
 with col2:
     st.subheader("Upload Fabric Texture")
     fabric_file = st.file_uploader("Choose a fabric texture...", type=['png', 'jpg', 'jpeg'])
     if fabric_file is not None:
-        fabric_image = Image.open(fabric_file).convert('RGB')
-        st.image(fabric_image, caption='Fabric Texture', use_column_width=True)
+        fabric_image = Image.open(fabric_file)
+        # Convert palette images with transparency to RGBA
+        if fabric_image.mode == 'P' and 'transparency' in fabric_image.info:
+            fabric_image = fabric_image.convert('RGBA')
+        st.image(fabric_image, caption='Fabric Texture', use_container_width=True)
 
 # Parameters
 st.sidebar.header("Adjust Parameters")
@@ -43,7 +49,7 @@ if st.button("Apply Fabric Texture") and sofa_file is not None and fabric_file i
             
             # Display result
             st.subheader("Result")
-            st.image(result, caption='Processed Sofa', use_column_width=True)
+            st.image(result, caption='Processed Sofa', use_container_width=True)
             
             # Save button
             buf = io.BytesIO()
@@ -81,4 +87,4 @@ with st.expander("Instructions and Tips"):
 
 # Footer
 st.markdown("---")
-st.markdown("Made with ❤️ by Junaid using Streamlit")
+st.markdown("Made with ❤️ using Streamlit")

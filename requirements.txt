@@ -1,7 +1,7 @@
-setuptools==67.8.0
-wheel==0.40.0
-numpy==1.24.3
-Pillow==9.5.0
-opencv-python-headless==4.7.0.72
-streamlit==1.22.0
-matplotlib==3.7.1
+setuptools>=68.0.0
+wheel>=0.41.0
+numpy>=1.26.0
+Pillow>=10.0.0
+opencv-python-headless>=4.8.0
+streamlit>=1.22.0
+matplotlib>=3.8.0

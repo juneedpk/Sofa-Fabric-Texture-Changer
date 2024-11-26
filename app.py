@@ -65,25 +65,25 @@ if st.button("Apply Fabric Texture") and sofa_file is not None and fabric_file i
             st.error(f"An error occurred: {str(e)}")
             st.error("Please try different parameters or images.")
 
-# Add instructions and tips
-with st.expander("Instructions and Tips"):
-    st.markdown("""
-    ### How to use:
-    1. Upload a clear image of your sofa
-    2. Upload a fabric texture image
-    3. Adjust the parameters:
-        - **Fabric Pattern Scale**: Controls the size of the fabric pattern
-        - **Image Resolution**: Higher DPI for better quality (but slower processing)
-        - **Brightness**: Adjust the brightness of the result
-    4. Click 'Apply Fabric Texture'
-    5. Download the result
+# # Add instructions and tips
+# with st.expander("Instructions and Tips"):
+#     st.markdown("""
+#     ### How to use:
+#     1. Upload a clear image of your sofa
+#     2. Upload a fabric texture image
+#     3. Adjust the parameters:
+#         - **Fabric Pattern Scale**: Controls the size of the fabric pattern
+#         - **Image Resolution**: Higher DPI for better quality (but slower processing)
+#         - **Brightness**: Adjust the brightness of the result
+#     4. Click 'Apply Fabric Texture'
+#     5. Download the result
     
-    ### Tips for best results:
-    - Use high-quality images
-    - Ensure the sofa is well-lit and clearly visible
-    - Choose fabric textures with clear patterns
-    - Adjust the pattern scale to match your sofa's size
-    """)
+#     ### Tips for best results:
+#     - Use high-quality images
+#     - Ensure the sofa is well-lit and clearly visible
+#     - Choose fabric textures with clear patterns
+#     - Adjust the pattern scale to match your sofa's size
+#     """)
 
 # Footer
 st.markdown("---")

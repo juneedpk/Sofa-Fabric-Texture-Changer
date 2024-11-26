@@ -81,4 +81,4 @@ with st.expander("Instructions and Tips"):
 
 # Footer
 st.markdown("---")
-st.markdown("Made with ❤️ using Streamlit")
+st.markdown("Made with ❤️ by Junaid using Streamlit")

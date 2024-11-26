@@ -1,38 +1,51 @@
-# Sofa Fabric Changer
+# Sofa Fabric Texture Changer
 
-This Streamlit web application allows users to change the fabric of a sofa by uploading a sofa image and a fabric texture image.
+An interactive web application that allows users to change the fabric texture of sofas in images. Built with Streamlit and OpenCV.
 
 ## Features
 
-- Upload sofa image
-- Upload fabric texture image
-- Preview both images before processing
-- Apply fabric texture to sofa
-- Download the resulting image
+- Upload sofa and fabric texture images
+- Adjust fabric pattern scale
+- Control image resolution (DPI)
+- Adjust brightness
+- Download processed images
+- High-quality texture mapping
+- Perspective-aware fabric application
 
 ## Installation
 
-1. Clone this repository
-2. Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+## Local Development
 
-1. Run the Streamlit app:
+Run the app locally:
+
 ```bash
 streamlit run app.py
 ```
 
-2. Open your web browser and navigate to the provided URL
-3. Upload a sofa image
-4. Upload a fabric texture image
-5. Click "Apply Fabric to Sofa" to process
-6. Download the result using the "Download Result" button
+## Deployment
 
-## Tips for Best Results
+This app is deployed on Streamlit Cloud. Visit [https://sofa-fabric-changer.streamlit.app](https://sofa-fabric-changer.streamlit.app) to use the application.
 
-- Use sofa images with a clear contrast between the sofa and background
-- Use fabric textures that are tileable and have consistent patterns
-- Make sure both images are well-lit and high quality
+## Usage
+
+1. Upload a clear image of your sofa
+2. Upload a fabric texture image
+3. Adjust the parameters:
+   - Fabric Pattern Scale: Controls the size of the fabric pattern
+   - Image Resolution: Higher DPI for better quality
+   - Brightness: Adjust the brightness of the result
+4. Click 'Apply Fabric Texture'
+5. Download the result
+
+## Requirements
+
+- Python 3.7+
+- OpenCV
+- NumPy
+- Pillow
+- Streamlit
+- Matplotlib

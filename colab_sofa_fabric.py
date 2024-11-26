@@ -177,7 +177,7 @@ def apply_fabric_to_sofa(sofa_image, fabric_image, fabric_scale=100, target_dpi=
         hull = cv2.convexHull(largest_contour)
         rect = cv2.minAreaRect(hull)
         box = cv2.boxPoints(rect)
-        box = np.int0(box)
+        box = np.array(box, dtype=np.int32)
         
         # Sort box points
         box = box[box[:,0].argsort()]
